@@ -54,6 +54,7 @@ genehancerDB.melted <- bind_rows(mclapply(db.test.score.1,
                                         function(x) gather(as.data.frame(t(x)), 
                                                            key = "connected_genes", 
                                                            value = "score", -V1), mc.cores=detectCores()))
+
 colnames(genehancerDB.melted)[1] <- "genehancer_id"
 genehancerDB.melted$score <- as.numeric(genehancerDB.melted$score)
 str(genehancerDB.melted)
