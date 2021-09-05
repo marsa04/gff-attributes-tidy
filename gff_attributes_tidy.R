@@ -6,7 +6,7 @@ library(parallel)
 
 
 #upload .gff file
-genehancerDB <- fread('/Users/maratsabirov/Desktop/HumanBrain/genehancerV5by1stJune2021/genehancer.gff')
+genehancerDB <- fread('path/to/your/version/genehancer.gff')
 
 # function for parsing 
 getAttributeField1 <- function (x, field, attrsep = ";") {
@@ -60,7 +60,7 @@ genehancerDB.melted$score <- as.numeric(genehancerDB.melted$score)
 str(genehancerDB.melted)
 
 # save generated dataset 
-write.table(genehancerDB.melted, file = "/Users/maratsabirov/Desktop/HumanBrain/genehancerV5by1stJune2021/genehancerDB.melted.csv", sep = ",")
+write.table(genehancerDB.melted, file = "/path/for/saving/genehancerDB.melted.csv", sep = ",")
 
 
 
